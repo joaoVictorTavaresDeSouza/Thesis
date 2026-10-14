@@ -1,0 +1,196 @@
+/* Login: layout e formulário (usa as variáveis e componentes de global.css) */
+:root {
+    --c-error: #ff8a80;
+}
+
+.auth {
+    padding-block: var(--s-5);
+    min-height: calc(100vh - 68px);
+    display: grid;
+    align-items: center;
+    background: radial-gradient(60% 80% at 15% 10%, rgba(63, 210, 227, 0.12), transparent 70%);
+}
+
+.auth__grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: var(--s-4);
+    align-items: center;
+}
+
+.auth__intro .callout {
+    margin-top: var(--s-3);
+}
+
+/* Cartão do formulário */
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+    justify-self: end;
+    background: var(--c-surface);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-lg);
+    padding: var(--s-4) var(--s-3);
+    box-shadow: var(--shadow);
+}
+
+.auth-card h2 {
+    margin-bottom: var(--s-3);
+}
+
+.auth-form {
+    display: grid;
+    gap: var(--s-2);
+}
+
+.form-field {
+    display: grid;
+    gap: .4rem;
+}
+
+.form-field label {
+    font-weight: 600;
+}
+
+.form-field input[type="email"],
+.form-field input[type="text"],
+.form-field input[type="password"] {
+    width: 100%;
+    min-height: 48px;
+    padding: .7rem 1rem;
+    background: var(--c-bg);
+    color: var(--c-text);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-sm);
+    font: inherit;
+}
+
+.form-field input:hover {
+    border-color: var(--c-muted);
+}
+
+.form-field [aria-invalid="true"] {
+    border-color: var(--c-error);
+}
+
+.field-error {
+    margin: 0;
+    font-size: .95rem;
+    color: var(--c-error);
+}
+
+/* Campo de senha com botão mostrar/ocultar */
+.password-wrap {
+    position: relative;
+}
+
+.password-wrap input {
+    padding-right: 3.2rem;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: .25rem;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: 0;
+    border-radius: var(--r-sm);
+    color: var(--c-muted);
+    cursor: pointer;
+}
+
+.password-toggle:hover,
+.password-toggle[aria-pressed="true"] {
+    color: var(--c-accent);
+}
+
+.password-toggle svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Checkbox */
+.check {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    min-height: 44px;
+    cursor: pointer;
+    color: var(--c-muted);
+}
+
+.check input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--c-accent);
+    flex-shrink: 0;
+}
+
+/* Status do envio */
+.form-status {
+    margin: 0;
+    min-height: 1.65em;
+    max-width: none;
+    color: var(--c-muted);
+}
+
+.form-status--ok {
+    color: var(--c-care);
+}
+
+.form-status--error {
+    color: var(--c-error);
+}
+
+/* Botão de envio */
+.btn--block {
+    width: 100%;
+}
+
+.btn[disabled] {
+    opacity: .7;
+    cursor: progress;
+}
+
+.btn.is-loading .btn__label::after {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: .6rem;
+    vertical-align: -.15em;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: auth-spin .7s linear infinite;
+}
+
+@keyframes auth-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsivo */
+@media (max-width:900px) {
+    .auth__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-card {
+        justify-self: stretch;
+        max-width: none;
+    }
+}
+
+@media (max-width:720px) {
+    .auth {
+        padding-block: var(--s-4);
+        min-height: 0;
+    }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Entrar | Natural Synergy</title>
+        <meta name="description" content="Acesse sua conta no Natural Synergy.">
+        <!-- Backend: preencher com o token CSRF da sessão (opcional). O login.js envia no cabeçalho X-CSRF-Token. -->
+        <meta name="csrf-token" content="">
+        <link rel="icon" type="image/svg+xml" href="../imgs/natural-synergy-logo.svg">
+        <link rel="apple-touch-icon" href="../imgs/natural-synergy-logo.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/login.css">
+    </head>
+
+    <body>
+
+        <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+        <header class="site-header">
+            <div class="container">
+                <a class="brand" href="../index.html" aria-label="Natural Synergy, página inicial">
+                    <img src="../imgs/natural-synergy-logo.svg" alt="" aria-hidden="true">
+                    <p style="margin:0">
+                        Natural
+                        <span>Synergy</span>
+                    </p>
+                </a>
+                <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">Menu</button>
+                <nav class="site-nav" id="site-nav" aria-label="Principal">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="instrucoes.html">Instruções</a>
+                        </li>
+                        <li>
+                            <a href="produto.html">Componentes</a>
+                        </li>
+                        <li>
+                            <a href="quem-somos.html">Quem somos?</a>
+                        </li>
+                        <li>
+                            <a class="btn btn--primary" href="login.html" aria-current="page">Entrar</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="conteudo">
+
+            <section class="auth">
+                <div class="container auth__grid">
+
+                    <div class="auth__intro">
+                        <h1>Acesse sua conta.</h1>
+                        <p class="lead">Entre para acessar a área do Natural Synergy.</p>
+                        <div class="callout">
+                            <p>Projeto experimental em desenvolvimento. Esta área não é um canal de emergência nem substitui acompanhamento médico.</p>
+                        </div>
+                    </div>
+
+                    <div class="auth-card">
+                        <h2>Entrar</h2>
+
+                        <!-- Backend: o formulário já aponta para a rota de login. O login.js intercepta o envio (fetch/JSON);
+                             sem JavaScript, o navegador envia um POST tradicional para este mesmo action. -->
+                        <form class="auth-form" id="login-form" action="/api/auth/login" method="post" novalidate>
+
+                            <div class="form-field">
+                                <label for="lg-email">E-mail</label>
+                                <input type="email" id="lg-email" name="email" autocomplete="username" inputmode="email" autocapitalize="none" spellcheck="false" required aria-describedby="lg-email-erro">
+                                <p class="field-error" id="lg-email-erro" hidden></p>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="lg-senha">Senha</label>
+                                <div class="password-wrap">
+                                    <input type="password" id="lg-senha" name="senha" autocomplete="current-password" required aria-describedby="lg-senha-erro">
+                                    <button type="button" class="password-toggle" id="lg-toggle" aria-controls="lg-senha" aria-pressed="false" aria-label="Mostrar senha">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/>
+                                            <circle cx="12" cy="12" r="3"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="field-error" id="lg-senha-erro" hidden></p>
+                            </div>
+
+                            <label class="check" for="lg-lembrar">
+                                <input type="checkbox" id="lg-lembrar" name="lembrar">
+                                <span>Manter conectado neste dispositivo</span>
+                            </label>
+
+                            <p class="form-status" id="login-status" role="status" aria-live="polite"></p>
+
+                            <button class="btn btn--primary btn--block" type="submit" id="login-submit">
+                                <span class="btn__label">Entrar</span>
+                            </button>
+                        </form>
+
+                        <noscript>
+                            <p class="form-status">Sem JavaScript, o formulário será enviado diretamente ao servidor.</p>
+                        </noscript>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div>
+                    <p>
+                        <strong>Natural Synergy</strong>
+                    </p>
+                    <p>Sistema IoT vestível para detecção de crises epilépticas e alerta de emergência. Projeto acadêmico apresentado no SIPIC (Simpósio de Pré-Iniciação Científica) do Colégio UNASP-SP.</p>
+                </div>
+                <nav aria-label="Rodapé">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="instrucoes.html">Instruções</a>
+                        </li>
+                        <li>
+                            <a href="produto.html">Componentes</a>
+                        </li>
+                        <li>
+                            <a href="quem-somos.html">Quem somos</a>
+                        </li>
+                    </ul>
+                </nav>
+                <p>Projeto de pesquisa aplicada e experimental, desenvolvido por discentes e docente do Colégio UNASP-SP.</p>
+                <p class="notice">Proposta experimental em desenvolvimento. Não é um produto médico certificado e não substitui acompanhamento médico, supervisão adequada ou serviços de emergência.</p>
+            </div>
+        </footer>
+
+        <script src="../js/script.js"></script>
+        <script src="../js/login.js"></script>
+
+    </body>
+</html>
