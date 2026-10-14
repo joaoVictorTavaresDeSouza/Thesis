@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Instruções | Natural Synergy</title>
+        <meta name="description" content="Guia do funcionamento planejado do Natural Synergy.">
+        <link rel="icon" type="image/svg+xml" href="../imgs/natural-synergy-logo.svg">
+        <link rel="apple-touch-icon" href="../imgs/natural-synergy-logo.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/instrucoes.css">
+    </head>
+
+    <body>
+
+        <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+        <header class="site-header">
+            <div class="container">
+                <a class="brand" href="../index.html" aria-label="Natural Synergy, página inicial">
+                    <img src="../imgs/natural-synergy-logo.svg" alt="" aria-hidden="true">
+                    <p style="margin:0">
+                        Natural
+                        <span>Synergy</span>
+                    </p>
+                </a>
+                <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">Menu</button>
+                <nav class="site-nav" id="site-nav" aria-label="Principal">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="instrucoes.html" aria-current="page">Instruções</a>
+                        </li>
+                        <li>
+                            <a href="produto.html">Componentes</a>
+                        </li>
+                        <li>
+                            <a href="quem-somos.html">Quem somos?</a>
+                        </li>
+                        <li>
+                            <a class="btn btn--primary" href="../index.html#solucao">Conheça o projeto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="conteudo">
+
+            <section class="page-hero">
+                <div class="container">
+                    <h1>Entenda como funciona o Natural Synergy.</h1>
+                    <p class="lead">Conheça as etapas de monitoramento, processamento e envio de alertas previstas na arquitetura do projeto.</p>
+                    <div class="callout">
+                        <p>Descrição do funcionamento planejado e de uma futura demonstração do protótipo, não um manual de uso nem de emergência.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--alt" id="visao-geral">
+                <div class="container">
+                    <h2 class="section-title">Visão geral do sistema</h2>
+                    <ol class="diagram">
+                        <li>Sensores biomédicos</li>
+                        <li>ESP32</li>
+                        <li>Análise dos dados</li>
+                        <li>Módulo de comunicação celular</li>
+                        <li>Envio do alerta</li>
+                    </ol>
+                    <p class="diagram-alt">Entrada alternativa: o botão de emergência aciona o alerta manualmente.</p>
+                </div>
+            </section>
+
+            <section class="section" id="passo-a-passo">
+                <div class="container">
+                    <h2 class="section-title">Guia passo a passo</h2>
+                    <ol class="steps-list">
+                        <li>
+                            <h3>Etapa 1: Monitoramento dos movimentos</h3>
+                            <p>O MPU6050 é o acelerômetro e giroscópio previsto na proposta para coletar informações relacionadas aos movimentos do usuário.</p>
+                        </li>
+                        <li>
+                            <h3>Etapa 2: Monitoramento da frequência cardíaca</h3>
+                            <p>O MAX30102 é destinado à coleta de dados relacionados à frequência cardíaca. Os sensores, isoladamente, não diagnosticam epilepsia.</p>
+                        </li>
+                        <li>
+                            <h3>Etapa 3: Processamento das informações</h3>
+                            <p>O ESP32 receberá e processará os dados dos sensores, com critérios de identificação que ainda precisam ser desenvolvidos e avaliados.</p>
+                        </li>
+                        <li>
+                            <h3>Etapa 4: Acionamento do alerta</h3>
+                            <p>A proposta prevê duas possibilidades: a identificação de um padrão compatível com uma crise ou o acionamento manual do botão de emergência.</p>
+                        </li>
+                        <li>
+                            <h3>Etapa 5: Envio da mensagem</h3>
+                            <p>O módulo SIM800L tem a função prevista de enviar um SMS com a localização do paciente, conforme a implementação efetivamente disponível. Formato da mensagem, destinatários e funcionamento da localização ainda não foram definidos.</p>
+                        </li>
+                        <li>
+                            <h3>Etapa 6: Testes e avaliação</h3>
+                            <p>A avaliação experimental considerará a distinção entre movimentos comuns e padrões convulsivos, falsos positivos, tempo de envio do SMS e autonomia da bateria. Ainda não há resultados.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="section section--alt" id="video">
+                <div class="container">
+                    <h2 class="section-title">Veja o Natural Synergy em funcionamento.</h2>
+                    <p>Este espaço será utilizado para apresentar uma demonstração prática do protótipo e explicar suas principais etapas de funcionamento.</p>
+                    <div id="video-slot">
+                        <div class="video-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M10 8.5v7l6-3.5z"/>
+                            </svg>
+                            <p style="margin:0">
+                                <strong>Vídeo demonstrativo em breve</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="faq">
+                <div class="container">
+                    <h2 class="section-title">Perguntas frequentes</h2>
+                    <div class="faq">
+                        <details>
+                            <summary>Qual é o objetivo do Natural Synergy?</summary>
+                            <p>Desenvolver um dispositivo vestível baseado em IoT para a detecção experimental de crises epilépticas, integrando sensores biomédicos e comunicação celular em uma arquitetura de baixo custo.</p>
+                        </details>
+                        <details>
+                            <summary>Quais sensores fazem parte do projeto?</summary>
+                            <p>O MPU6050 (acelerômetro e giroscópio) e o MAX30102 (frequência cardíaca), conectados a um ESP32.</p>
+                        </details>
+                        <details>
+                            <summary>Como o alerta deverá ser enviado?</summary>
+                            <p>Por SMS, com a localização do paciente, usando o módulo SIM800L. Os detalhes da implementação ainda serão definidos.</p>
+                        </details>
+                        <details>
+                            <summary>O sistema já está finalizado?</summary>
+                            <p>Não. O projeto é experimental: o desenvolvimento do protótipo e a validação ainda são necessários.</p>
+                        </details>
+                        <details>
+                            <summary>O dispositivo substitui acompanhamento médico?</summary>
+                            <p>Não. Ele não substitui acompanhamento médico, supervisão adequada nem serviços de emergência.</p>
+                        </details>
+                    </div>
+                    <div class="btn-row">
+                        <a class="btn btn--primary" href="../index.html">Voltar à apresentação</a>
+                        <a class="btn btn--ghost" href="produto.html">Ver componentes</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div>
+                    <p>
+                        <strong>Natural Synergy</strong>
+                    </p>
+                    <p>Sistema IoT vestível para detecção de crises epilépticas e alerta de emergência. Projeto acadêmico apresentado no SIPIC (Simpósio de Pré-Iniciação Científica) do Colégio UNASP-SP.</p>
+                </div>
+                <nav aria-label="Rodapé">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="instrucoes.html">Instruções</a>
+                        </li>
+                        <li>
+                            <a href="produto.html">Componentes</a>
+                        </li>
+                    </ul>
+                </nav>
+                <p>Projeto de pesquisa aplicada e experimental, desenvolvido por discentes e docente do Colégio UNASP-SP.</p>
+                <p class="notice">Proposta experimental em desenvolvimento. Não é um produto médico certificado e não substitui acompanhamento médico, supervisão adequada ou serviços de emergência.</p>
+            </div>
+        </footer>
+
+        <script src="../js/script.js"></script>
+        
+    </body>
+</html>

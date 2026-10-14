@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Início | Natural Synergy</title>
+        <meta name="description" content="Natural Synergy: sistema IoT vestível experimental para detecção de crises epilépticas e alerta de emergência.">
+        <link rel="icon" type="image/svg+xml" href="imgs/natural-synergy-logo.svg">
+        <link rel="apple-touch-icon" href="imgs/natural-synergy-logo.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+        <link rel="stylesheet" href="css/global.css">
+    </head>
+
+    <body>
+
+        <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+        <header class="site-header">
+            <div class="container">
+                <a class="brand" href="index.html" aria-label="Natural Synergy, página inicial">
+                    <img src="imgs/natural-synergy-logo.svg" alt="" aria-hidden="true">
+                    <p style="margin:0">
+                        Natural
+                        <span>Synergy</span>
+                    </p>
+                </a>
+                <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">Menu</button>
+                <nav class="site-nav" id="site-nav" aria-label="Principal">
+                    <ul>
+                        <li>
+                            <a href="index.html" aria-current="page">Início</a>
+                        </li>
+                        <li>
+                            <a href="pages/instrucoes.html">Instruções</a>
+                        </li>
+                        <li>
+                            <a href="pages/produto.html">Componentes</a>
+                        </li>
+                        <li>
+                            <a href="pages/quem-somos.html">Quem somos?</a>
+                        </li>
+                        <li>
+                            <a class="btn btn--primary" href="index.html#solucao">Conheça o projeto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="conteudo">
+
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Tecnologia que conecta cuidado, segurança e inovação.</h1>
+                        <p>O Natural Synergy é um projeto de dispositivo vestível inteligente que propõe auxiliar na identificação de crises epilépticas e no envio de alertas de emergência.</p>
+                        <div class="btn-row">
+                            <a class="btn btn--primary" href="pages/instrucoes.html">Conheça o funcionamento</a>
+                            <a class="btn btn--ghost" href="pages/produto.html">Ver componentes</a>
+                        </div>
+                    </div>
+                    <figure class="hero-visual">
+                        <svg viewBox="0 0 420 340" role="img" aria-labelledby="hv-t" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <title id="hv-t">Ilustração conceitual: pulseira com sensores que envia um alerta por SMS a um contato de emergência</title>
+                            <rect x="30" y="130" width="170" height="80" rx="40" fill="#152736" stroke="#24394b" stroke-width="2"/>
+                            <rect x="85" y="115" width="60" height="110" rx="16" fill="#0f1d29" stroke="#3fd2e3" stroke-width="2.4"/>
+                            <path d="M95 172h12l6-16 8 30 6-14h8" stroke="#5eeab5" stroke-width="2.4"/>
+                            <circle cx="115" cy="130" r="3" fill="#3fd2e3"/>
+                            <path d="M150 170q60 0 90-50M150 170q60 0 90 50" stroke="#3fd2e3" stroke-width="2" stroke-dasharray="5 7"/>
+                            <rect x="260" y="70" width="110" height="200" rx="18" fill="#0f1d29" stroke="#24394b" stroke-width="2"/>
+                            <rect x="274" y="102" width="82" height="46" rx="8" fill="#152736" stroke="#5eeab5" stroke-width="1.6"/>
+                            <path d="M284 118h50M284 130h34" stroke="#9db0c0" stroke-width="2.4"/>
+                            <path d="M314 190l12 12 20-24" stroke="#5eeab5" stroke-width="3"/>
+                            <circle cx="240" cy="120" r="5" fill="#3fd2e3"/>
+                            <circle cx="240" cy="220" r="5" fill="#3fd2e3"/>
+                        </svg>
+                        <figcaption>Ilustração conceitual, não é uma fotografia do protótipo.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="section section--alt" id="problema">
+                <div class="container">
+                    <h2 class="section-title">O problema que o projeto busca enfrentar</h2>
+                    <p>A epilepsia é uma das condições neurológicas crônicas mais comuns e se caracteriza pela imprevisibilidade das crises. Essa imprevisibilidade pode expor pacientes a quedas e traumatismos, além de gerar preocupação constante em familiares e cuidadores.</p>
+                    <p>Soluções comerciais, como smartwatches importados, costumam ter custo elevado e exigir assinaturas mensais. Por isso, o projeto busca alternativas acessíveis de monitoramento e de auxílio ao acionamento de socorro.</p>
+                </div>
+            </section>
+
+            <section class="section" id="solucao">
+                <div class="container">
+                    <h2 class="section-title">Solução proposta: uma arquitetura experimental</h2>
+                    <ul class="feature-grid">
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 12h16M8 8l-4 4 4 4M16 8l4 4-4 4"/>
+                            </svg>
+                            <h3>Movimento</h3>
+                            <p>Monitoramento de movimento com acelerômetro e giroscópio.</p>
+                        </li>
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M3 12h4l2-5 4 10 2-5h6"/>
+                            </svg>
+                            <h3>Frequência cardíaca</h3>
+                            <p>Acompanhamento da frequência cardíaca por sensor óptico.</p>
+                        </li>
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="8" y="8" width="8" height="8"/>
+                                <path d="M10 3v5M14 3v5M10 16v5M14 16v5M3 10h5M3 14h5M16 10h5M16 14h5"/>
+                            </svg>
+                            <h3>Processamento</h3>
+                            <p>Dados processados por um microcontrolador.</p>
+                        </li>
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 20v-9M8 8a5.6 5.6 0 0 1 8 0M5 5a10 10 0 0 1 14 0"/>
+                            </svg>
+                            <h3>Comunicação celular</h3>
+                            <p>Envio de alertas por SMS pela rede celular.</p>
+                        </li>
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="8"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            <h3>Botão de emergência</h3>
+                            <p>Acionamento manual do alerta a qualquer momento.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section section--alt" id="como-funciona">
+                <div class="container">
+                    <h2 class="section-title">Como funciona (planejado)</h2>
+                    <ol class="flow">
+                        <li>
+                            <h3>Monitoramento</h3>
+                            <p>Os sensores coletam informações relacionadas ao movimento e à frequência cardíaca.</p>
+                        </li>
+                        <li>
+                            <h3>Processamento</h3>
+                            <p>O microcontrolador analisa as informações coletadas.</p>
+                        </li>
+                        <li>
+                            <h3>Identificação ou acionamento</h3>
+                            <p>O sistema busca padrões compatíveis com uma crise ou recebe o acionamento manual do botão.</p>
+                        </li>
+                        <li>
+                            <h3>Alerta</h3>
+                            <p>A arquitetura proposta envia um SMS com a localização do paciente.</p>
+                        </li>
+                    </ol>
+                    <div class="callout" style="margin-top:1.5rem">
+                        <p>Este é o funcionamento planejado do projeto, não um resultado clínico comprovado.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="diferenciais">
+                <div class="container">
+                    <h2 class="section-title">Diferenciais do projeto</h2>
+                    <ul class="feature-grid">
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M9 12h6"/>
+                            </svg>
+                            <h3>Componentes acessíveis</h3>
+                            <p>Proposta baseada em componentes eletrônicos de baixo custo.</p>
+                        </li>
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M3 12h4l2-5 4 10 2-5h6"/>
+                            </svg>
+                            <h3>Sensores e IoT</h3>
+                            <p>Integração entre sensores biomédicos e Internet das Coisas.</p>
+                        </li>
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 20v-9M8 8a5.6 5.6 0 0 1 8 0M5 5a10 10 0 0 1 14 0"/>
+                            </svg>
+                            <h3>Alerta celular</h3>
+                            <p>Comunicação celular para alertas de emergência.</p>
+                        </li>
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="8"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            <h3>Acionamento manual</h3>
+                            <p>Botão físico complementa a detecção automática.</p>
+                        </li>
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 5h7a3 3 0 0 1 3 3v12a3 3 0 0 0-3-3H4zM20 5h-6"/>
+                            </svg>
+                            <h3>Caráter acadêmico</h3>
+                            <p>Desenvolvimento acadêmico e experimental.</p>
+                        </li>
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="8" r="4"/>
+                                <path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>
+                            </svg>
+                            <h3>Tecnologia assistiva</h3>
+                            <p>Potencial de contribuição para tecnologias assistivas de baixo custo.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section section--alt" id="publico">
+                <div class="container">
+                    <h2 class="section-title">Para quem o projeto foi pensado</h2>
+                    <ul class="feature-grid">
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="8" r="4"/>
+                                <path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>
+                            </svg>
+                            <h3>Pessoas com epilepsia</h3>
+                            <p>Quem convive com crises imprevisíveis.</p>
+                        </li>
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="8" r="4"/>
+                                <path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>
+                            </svg>
+                            <h3>Familiares e cuidadores</h3>
+                            <p>Quem acompanha o dia a dia e se preocupa com a segurança.</p>
+                        </li>
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 5h7a3 3 0 0 1 3 3v12a3 3 0 0 0-3-3H4zM20 5h-6"/>
+                            </svg>
+                            <h3>Pesquisadores e estudantes</h3>
+                            <p>Quem estuda IoT, sistemas embarcados e saúde digital.</p>
+                        </li>
+                        <li class="feature-card">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="8" y="8" width="8" height="8"/>
+                                <path d="M10 3v5M14 3v5M10 16v5M14 16v5M3 10h5M3 14h5M16 10h5M16 14h5"/>
+                            </svg>
+                            <h3>Profissionais de tecnologias assistivas</h3>
+                            <p>Quem busca soluções acessíveis de apoio.</p>
+                        </li>
+                    </ul>
+                    <div class="callout" style="margin-top:1.5rem">
+                        <p>O sistema é experimental e não substitui acompanhamento médico, supervisão adequada ou serviços de emergência.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="objetivo">
+                <div class="container">
+                    <h2 class="section-title">Objetivo científico</h2>
+                    <p class="goal">Desenvolver um dispositivo vestível baseado em Internet das Coisas para a detecção experimental de padrões compatíveis com crises epilépticas em tempo real, integrando sensores biomédicos e comunicação celular em uma arquitetura de baixo custo voltada à segurança do paciente.</p>
+                </div>
+            </section>
+
+            <section class="section section--alt">
+                <div class="container">
+                    <h2 class="section-title">Conheça a tecnologia por trás do Natural Synergy.</h2>
+                    <div class="btn-row">
+                        <a class="btn btn--primary" href="pages/instrucoes.html">Consultar o guia de funcionamento</a>
+                        <a class="btn btn--ghost" href="pages/produto.html">Conhecer os componentes</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div>
+                    <p>
+                        <strong>Natural Synergy</strong>
+                    </p>
+                    <p>Sistema IoT vestível para detecção de crises epilépticas e alerta de emergência. Projeto acadêmico apresentado no SIPIC (Simpósio de Pré-Iniciação Científica) do Colégio UNASP-SP.</p>
+                </div>
+                <nav aria-label="Rodapé">
+                    <ul>
+                        <li>
+                            <a href="index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="pages/instrucoes.html">Instruções</a>
+                        </li>
+                        <li>
+                            <a href="pages/produto.html">Componentes</a>
+                        </li>
+                    </ul>
+                </nav>
+                <p>Projeto de pesquisa aplicada e experimental, desenvolvido por discentes e docente do Colégio UNASP-SP.</p>
+                <p class="notice">Proposta experimental em desenvolvimento. Não é um produto médico certificado e não substitui acompanhamento médico, supervisão adequada ou serviços de emergência.</p>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
+
+    </body>
+
+</html>

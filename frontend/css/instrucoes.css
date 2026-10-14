@@ -1,0 +1,153 @@
+/* Instruções */
+.steps-list,
+.flow {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: step;
+}
+
+.flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--s-3);
+}
+
+.flow li,
+.steps-list li {
+    counter-increment: step;
+    background: var(--c-surface-2);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-md);
+    padding: var(--s-3);
+}
+
+.flow li::before,
+.steps-list li::before {
+    content: counter(step);
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--c-accent);
+    color: var(--c-on-accent);
+    font: 700 1rem var(--f-head);
+    margin-bottom: var(--s-2);
+}
+
+.flow p,
+.steps-list p {
+    margin: 0;
+    color: var(--c-muted);
+}
+
+.steps-list {
+    display: grid;
+    gap: var(--s-2);
+}
+
+.diagram {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: var(--s-3);
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--s-2);
+}
+
+.diagram li {
+    flex: 1 1 140px;
+    text-align: center;
+    background: var(--c-surface-2);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-md);
+    padding: var(--s-2);
+    position: relative;
+}
+
+.diagram li + li::before {
+    content: "\2192";
+    position: absolute;
+    left: -1.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--c-accent);
+    font-weight: 700;
+}
+
+.diagram-alt {
+    border: 2px dashed var(--c-care);
+    border-radius: var(--r-md);
+    padding: var(--s-2);
+    text-align: center;
+    max-width: var(--w-read);
+}
+
+.video-placeholder {
+    aspect-ratio: 16/9;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--c-surface-2), var(--c-bg));
+    border: 2px dashed var(--c-line);
+    border-radius: var(--r-lg);
+    padding: var(--s-3);
+}
+
+.video-placeholder svg {
+    width: 72px;
+    height: 72px;
+    color: var(--c-muted);
+}
+
+.video-frame {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: 0;
+    border-radius: var(--r-lg);
+}
+
+.faq details {
+    background: var(--c-surface-2);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-md);
+    margin-bottom: var(--s-1);
+}
+
+.faq summary {
+    cursor: pointer;
+    padding: var(--s-2) var(--s-3);
+    font-weight: 600;
+    min-height: 44px;
+}
+
+.faq details p {
+    padding: 0 var(--s-3);
+    color: var(--c-muted);
+}
+
+@media (max-width:900px) {
+    .flow {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:720px) {
+    .flow {
+        grid-template-columns: 1fr;
+    }
+
+    .diagram {
+        flex-direction: column;
+    }
+
+    .diagram li + li::before {
+        content: "\2193";
+        left: 50%;
+        top: -1.5rem;
+        transform: translateX(-50%);
+    }
+}

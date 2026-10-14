@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Componentes | Natural Synergy</title>
+        <meta name="description" content="Componentes e custos do protótipo Natural Synergy.">
+        <link rel="icon" type="image/svg+xml" href="../imgs/natural-synergy-logo.svg">
+        <link rel="apple-touch-icon" href="../imgs/natural-synergy-logo.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/produto.css">
+    </head>
+
+    <body>
+
+        <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+        <header class="site-header">
+            <div class="container">
+                <a class="brand" href="../index.html" aria-label="Natural Synergy, página inicial">
+                    <img src="../imgs/natural-synergy-logo.svg" alt="" aria-hidden="true">
+                    <p style="margin:0">
+                        Natural
+                        <span>Synergy</span>
+                    </p>
+                </a>
+                <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">Menu</button>
+                <nav class="site-nav" id="site-nav" aria-label="Principal">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="instrucoes.html">Instruções</a>
+                        </li>
+                        <li>
+                            <a href="produto.html" aria-current="page">Componentes</a>
+                        </li>
+                        <li>
+                            <a href="quem-somos.html">Quem somos?</a>
+                        </li>
+                        <li>
+                            <a class="btn btn--primary" href="../index.html#solucao">Conheça o projeto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="conteudo">
+
+            <section class="page-hero">
+                <div class="container">
+                    <h1>A tecnologia por trás do Natural Synergy.</h1>
+                    <p class="lead">Conheça os componentes eletrônicos e materiais previstos para a construção do protótipo.</p>
+                </div>
+            </section>
+
+            <section class="section" id="catalogo">
+                <div class="container">
+                    <h2 class="section-title">Catálogo de componentes</h2>
+                    <ul class="component-grid" id="component-grid">
+                        <li>Carregando componentes...</li>
+                    </ul>
+                    <noscript>
+                        <p>Ative o JavaScript para ver o catálogo e o orçamento.</p>
+                    </noscript>
+                </div>
+            </section>
+
+            <section class="section section--alt" id="orcamento">
+                <div class="container">
+                    <h2 class="section-title">Resumo do orçamento</h2>
+                    <dl class="budget-summary">
+                        <div>
+                            <dt id="b-label">Total parcial</dt>
+                            <dd id="b-total">-</dd>
+                        </div>
+                        <div>
+                            <dt>Itens cadastrados</dt>
+                            <dd id="b-itens">-</dd>
+                        </div>
+                        <div>
+                            <dt>Preços pendentes</dt>
+                            <dd id="b-pend">-</dd>
+                        </div>
+                        <div>
+                            <dt>Orçamento preenchido</dt>
+                            <dd id="b-pct">-</dd>
+                        </div>
+                    </dl>
+                    <p id="b-msg"></p>
+                </div>
+            </section>
+
+            <section class="section" id="detalhes">
+                <div class="container">
+                    <h2 class="section-title">Detalhes técnicos</h2>
+                    <ul>
+                        <li>
+                            <strong>ESP32:</strong>
+                            processamento e controle.
+                        </li>
+                        <li>
+                            <strong>MPU6050:</strong>
+                            leitura de aceleração e rotação.
+                        </li>
+                        <li>
+                            <strong>MAX30102:</strong>
+                            leitura de sinais ópticos relacionados à frequência cardíaca.
+                        </li>
+                        <li>
+                            <strong>SIM800L:</strong>
+                            comunicação celular e envio de SMS.
+                        </li>
+                        <li>
+                            <strong>Bateria LiPo:</strong>
+                            alimentação elétrica.
+                        </li>
+                        <li>
+                            <strong>Impressão 3D:</strong>
+                            produção do invólucro do protótipo.
+                        </li>
+                    </ul>
+                    <p>A compatibilidade elétrica e operacional entre os módulos depende da montagem real e ainda será verificada pela equipe.</p>
+                </div>
+            </section>
+
+            <section class="section section--alt" id="transparencia">
+                <div class="container">
+                    <h2 class="section-title">Transparência dos custos</h2>
+                    <p>Os valores poderão variar conforme fornecedor, frete, disponibilidade, especificações e quantidade adquirida. O total é calculado apenas com os itens que têm preço informado; itens pendentes nunca contam como zero.</p>
+                    <div class="btn-row">
+                        <a class="btn btn--primary" href="../index.html">Voltar à apresentação</a>
+                        <a class="btn btn--ghost" href="produto.html">Ver componentes</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div>
+                    <p>
+                        <strong>Natural Synergy</strong>
+                    </p>
+                    <p>Sistema IoT vestível para detecção de crises epilépticas e alerta de emergência. Projeto acadêmico apresentado no SIPIC (Simpósio de Pré-Iniciação Científica) do Colégio UNASP-SP.</p>
+                </div>
+                <nav aria-label="Rodapé">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="instrucoes.html">Instruções</a>
+                        </li>
+                        <li>
+                            <a href="produto.html">Componentes</a>
+                        </li>
+                    </ul>
+                </nav>
+                <p>Projeto de pesquisa aplicada e experimental, desenvolvido por discentes e docente do Colégio UNASP-SP.</p>
+                <p class="notice">Proposta experimental em desenvolvimento. Não é um produto médico certificado e não substitui acompanhamento médico, supervisão adequada ou serviços de emergência.</p>
+            </div>
+        </footer>
+
+        <script src="../js/script.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,148 @@
+@import url('./global.css');
+
+/* Quem somos: equipe */
+.team-grid {
+    display: grid;
+    gap: var(--s-3);
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    background: var(--c-surface-2);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-md);
+    padding: var(--s-3);
+    box-shadow: var(--shadow);
+}
+
+.member-photo {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 1;
+    margin: 0 auto var(--s-2);
+    overflow: hidden;
+    background: linear-gradient(135deg,var(--c-surface),var(--c-bg));
+    border: 2px solid var(--c-line);
+    border-radius: var(--r-lg);
+    color: var(--c-muted);
+}
+
+.member-photo svg {
+    width: 72px;
+    height: 72px;
+}
+
+.member-photo figcaption {
+    font-size: .9rem;
+}
+
+.member-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.member-card h3 {
+    margin-bottom: var(--s-1);
+}
+
+.member-social {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    min-height: 44px;
+    margin-top: auto;
+    color: var(--c-accent);
+    text-decoration: none;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.member-social:hover {
+    color: var(--c-care);
+    text-decoration: underline;
+}
+
+.member-social svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+/* Formulário de contato */
+.contact-form {
+    display: grid;
+    gap: var(--s-2);
+    max-width: 640px;
+    margin-top: var(--s-3);
+}
+
+.form-field {
+    display: grid;
+    gap: .4rem;
+}
+
+.form-field label {
+    font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: .7rem 1rem;
+    background: var(--c-bg);
+    color: var(--c-text);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-sm);
+    font: inherit;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.form-field input:hover,
+.form-field textarea:hover {
+    border-color: var(--c-muted);
+}
+
+.form-field [aria-invalid="true"] {
+    border-color: #ff8a80;
+}
+
+.contact-form .btn-row {
+    margin-top: var(--s-1);
+}
+
+.form-status {
+    margin: 0;
+    min-height: 1.65em;
+    color: var(--c-muted);
+}
+
+.form-status--ok {
+    color: var(--c-care);
+}
+
+.form-status--error {
+    color: #ff8a80;
+}
+
+@media (max-width:720px) {
+    .contact-form .btn {
+        width: 100%;
+    }
+}
